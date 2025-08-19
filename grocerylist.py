@@ -9,9 +9,6 @@ print("4. Quit")
 
 items = []
 
-
-
-
 while True:
     
     input_choice = input("Enter your choice: ")

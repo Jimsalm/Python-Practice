@@ -15,6 +15,3 @@ while isGuessed == False:
         isGuessed = True
     else:
         print("Please enter a valid number")
-
-
-print("test")

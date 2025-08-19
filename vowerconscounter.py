@@ -13,4 +13,4 @@ for letter in user_input:
         consonant_count += 1
 
 print(f'Vowels: {vowel_count}')
-print(f'Consonant: {consonant_count}')
+print(f'Consonant: {consonant_count}\n')

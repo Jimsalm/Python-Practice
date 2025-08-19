@@ -18,4 +18,5 @@ while isGuessed == False:
 
 
     print("test")
+    print("test 2")
         

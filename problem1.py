@@ -122,3 +122,86 @@
 #print(search_books("Python", "Data"))
 
 #display_library()
+
+
+
+# # Dictionary structure: { student_id: (name, age, grades) }
+# students = {
+#     "S001": ("Alice", 20, (90, 85, 92)),
+#     "S002": ("Bob", 21, (78, 81, 86)),
+#     "S003": ("Charlie", 19, (95, 90, 93))
+# }
+
+
+# # 1. Add a new student
+# def add_student(student_id, name, age, *grades):
+#     if student_id in students:
+#         print(f"Student {student_id} already exists.")
+#     else:
+#         students[student_id] = (name, age, grades)
+#         print(f"Student {student_id} added successfully!")
+
+
+# # 2. Get average grade of a student
+# def get_average(student_id):
+#     try:
+#         name, age, grades = students[student_id]
+#         if not grades:
+#             raise ValueError("No grades available")
+#         return sum(grades) / len(grades)
+#     except KeyError:
+#         raise KeyError(f"Student {student_id} not found")
+
+
+# # 3. Update grades of a student
+# def update_grades(student_id, *new_grades):
+#     try:
+#         name, age, _ = students[student_id]
+#         students[student_id] = (name, age, new_grades)
+#         print(f"Grades updated for {student_id}")
+#     except KeyError:
+#         raise KeyError(f"Student {student_id} not found")
+
+
+# # 4. Rank students by average grade (highest first)
+# def rank_students():
+#     ranked = sorted(
+#         students.items(),
+#         key=lambda x: sum(x[1][2]) / len(x[1][2]) if x[1][2] else 0,
+#         reverse=True
+#     )
+#     return ranked
+
+
+# # 5. Display students with averages
+# def display_students():
+#     print("\n🎓 Student Records:")
+#     for student_id, (name, age, grades) in rank_students():
+#         try:
+#             avg = get_average(student_id)
+#             print(f"ID: {student_id} | Name: {name} | Age: {age} "
+#                   f"| Grades: {grades} | Average: {avg:.2f}")
+#         except ValueError as e:
+#             print(f"ID: {student_id} | Name: {name} | Age: {age} "
+#                   f"| Grades: {grades} | Error: {e}")
+#     print("-" * 60)
+
+
+# # -------------------------
+# # Example Usage
+# # -------------------------
+
+# # Add a new student
+# add_student("S004", "Diana", 22, 88, 91, 85)
+
+# # Update Bob's grades
+# update_grades("S002", 90, 89, 87)
+
+# # Try updating a non-existent student
+# try:
+#     update_grades("S999", 100)
+# except KeyError as e:
+#     print(f"Error: {e}")
+
+# # Display final records
+# display_students()

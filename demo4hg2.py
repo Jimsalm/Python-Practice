@@ -88,6 +88,5 @@
 #     print('terminated!')
 
 # Lists
-names = ['Renz Carlos', 'Brix', 'Christian', 'James', 'Christian', 'Oliver']
-print(len(names) + names.count('Christian'))
+#
 
